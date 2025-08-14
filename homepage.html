@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Google Minimal Dark</title>
+<title>Google Minimal Black</title>
 <style>
     body {
-        background-color: #121212;
+        background-color: #000000;
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         height: 100vh;
         margin: 0;
+        padding-top: 15vh; /* Push content upward */
     }
     img {
-        width: 272px;
+        width: 220px;
         height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     form {
         display: flex;
@@ -26,22 +27,52 @@
         width: 100%;
     }
     input[type="text"] {
-        width: 90%;
-        max-width: 500px;
-        padding: 12px 20px;
+        width: 80%;
+        max-width: 400px;
+        padding: 10px 18px;
         font-size: 16px;
         border: none;
         border-radius: 24px;
         outline: none;
-        background-color: #2a2a2a;
-        color: #fff;
-        box-shadow: 0 0 0 1px #444;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        box-shadow: 0 0 0 1px #333;
     }
     input[type="text"]::placeholder {
-        color: #aaa;
+        color: #888;
     }
     input[type="submit"] {
         display: none;
+    }
+    .shortcuts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 20px;
+    }
+    .shortcut {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+    }
+    .shortcut-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #1a1a1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+        box-shadow: 0 0 0 1px #333;
+    }
+    .shortcut-icon img {
+        width: 24px;
+        height: 24px;
     }
 </style>
 </head>
@@ -51,5 +82,20 @@
         <input type="text" name="q" autofocus autocomplete="off" placeholder="Search Google...">
         <input type="submit" value="Search">
     </form>
+
+    <div class="shortcuts">
+        <a href="https://chat.openai.com" class="shortcut">
+            <div class="shortcut-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=chat.openai.com"></div>
+            ChatGPT
+        </a>
+        <a href="https://grok.com/chat" class="shortcut">
+            <div class="shortcut-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=grok.com"></div>
+            Grok
+        </a>
+        <a href="https://claude.ai/chat" class="shortcut">
+            <div class="shortcut-icon"><img src="https://www.google.com/s2/favicons?sz=64&domain=claude.ai"></div>
+            Claude
+        </a>
+    </div>
 </body>
 </html>
